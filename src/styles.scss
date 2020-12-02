@@ -2,9 +2,12 @@
 
 body {
   margin: 0;
+  background: #3c40c6;
+  color: #fff;
 }
 
 .container {
+  color: #fff;
   padding: 1rem;
   margin-top: 1rem;
 }
@@ -12,10 +15,14 @@ body {
 .draggable {
   padding: 1rem;
   background-color: white;
-  border: 1px solid black;
+  border: 1px solid #ccc;
   cursor: move;
-}
+  transition: all .2s;
 
-.draggable.dragging {
-  opacity: .5;
+  &:hover{
+    background-color: #ecf0f1;
+  }
+  &.dragging {
+    opacity: .5;
+  }
 }
