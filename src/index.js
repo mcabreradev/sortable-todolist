@@ -5,8 +5,6 @@
   const todos = await res.json();
   const list = document.querySelectorAll(".list");
 
-  console.log(document.querySelectorAll(".list")[0]);
-
   todos.forEach((todo) => {
     let node = document.createElement("li");
     node.className = "draggable box";
@@ -39,7 +37,7 @@
     });
   });
 
-  function getDragAfterElement(list_item, y) {
+  const getDragAfterElement = (list_item, y) => {
     const draggableElements = [
       ...list_item.querySelectorAll(".draggable:not(.dragging)")
     ];
@@ -56,5 +54,5 @@
       },
       { offset: Number.NEGATIVE_INFINITY }
     ).element;
-  }
+  };
 })();
